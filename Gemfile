@@ -34,4 +34,5 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.7'
+  gem 'spork', '~> 0.9.0.rc'
 end
