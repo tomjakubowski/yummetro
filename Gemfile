@@ -37,3 +37,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.7'
   gem 'spork', '~> 0.9.0.rc'
 end
+
+group :test do
+  gem 'factory_girl_rails'
+end
