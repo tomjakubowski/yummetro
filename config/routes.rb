@@ -1,4 +1,6 @@
 Railonrails::Application.routes.draw do
+  resources :lines
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

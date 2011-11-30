@@ -1,0 +1,5 @@
+-@lines.each_slice(3) do |chunk|
+  .row
+    -chunk.each do |line|
+      .span-one-third
+        =render :partial => "line_information", :locals => { :line => line }

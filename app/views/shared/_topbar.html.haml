@@ -3,11 +3,9 @@
     .container
       %a.brand(href="/")Untitled
       %ul.nav
-        %li
-          %a(href="#")Lines
+        %li=link_to "Lines", lines_path
         %li
           %a(href="#")Stations
-        %li
-          %a(href="#")blah blah
       %form.pull-right
-        %input(type="text" placeholder="Search...")
+        %input.span4(type="text" placeholder="Search for...")
+        %input.span4(type="text" placeholder="Near...")
