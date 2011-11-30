@@ -1,4 +1,4 @@
-Railonrails::Application.routes.draw do
+Metro::Application.routes.draw do
   resources :lines do
     get :autocomplete_station_name, :on => :collection
   end
