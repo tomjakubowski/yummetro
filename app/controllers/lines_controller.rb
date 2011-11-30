@@ -1,4 +1,6 @@
 class LinesController < ApplicationController
+  autocomplete :station, :name
+
   def index
     @lines = Line.all
   end

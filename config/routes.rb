@@ -1,5 +1,7 @@
 Railonrails::Application.routes.draw do
-  resources :lines
+  resources :lines do
+    get :autocomplete_station_name, :on => :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
