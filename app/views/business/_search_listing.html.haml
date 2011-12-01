@@ -1,0 +1,11 @@
+%header
+  %h2
+    =business.name
+    %small="%.2f miles away" % business.distance_in_miles
+  %p
+    =image_tag(business.rating_image_url)
+    =link_to "Read #{business.review_count} reviews on Yelp!", business.yelp_url, :target => "_blank"
+%address
+  -business.display_address.each do |line|
+    =line
+    %br

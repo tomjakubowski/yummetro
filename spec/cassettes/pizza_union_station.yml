@@ -1,0 +1,65 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.yelp.com:80/v2/search?limit=5&ll=34.054761,-118.234254&radius_filter=1000&sort=0&term=pizza
+    body: !!null 
+    headers:
+      user-agent:
+      - OAuth gem v0.4.5
+      authorization:
+      - OAuth oauth_consumer_key="5PldQEUUJyUVVWyi304sRg", oauth_nonce="KCMGFCyhgw97mZXX9Gr5XQXealooi0qwgfpcpxqwikc",
+        oauth_signature="Dq0gCuu0jZpNkVKUFOyVZetcW4o%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1322711565", oauth_token="jzhBxBn0xM5qi756hDHIibZvYyu5YpPs",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 01 Dec 2011 03:52:47 GMT
+      server:
+      - Apache
+      x-node:
+      - web40, api_com
+      set-cookie:
+      - bs=e0501e9e40b4cceaff9932e15e970f85; Max-Age=631080432; Path=/; expires=Sun,
+        30-Nov-2031 08:00:00 GMT; HttpOnly
+      content-type:
+      - application/json
+      content-length:
+      - '6867'
+      vary:
+      - Accept-Encoding,User-Agent
+      x-proxied:
+      - lb2
+    body: ! '{"region":{"span":{"latitude_delta":0.010271799999998166,"longitude_delta":0.016822079999997186},"center":{"latitude":34.050091999999999,"longitude":-118.2330966}},"total":7,"businesses":[{"distance":964.06277999681572,"mobile_url":"http://m.yelp.com/biz/aoRDkamn_EolHnJZGgdOvA","rating_img_url":"http://media2.ak.yelpcdn.com/static/201012164084228337/img/ico/stars/stars_4.png","review_count":64,"name":"Xlixe
+      Pizzeria","rating":4.0,"url":"http://www.yelp.com/biz/xlixe-pizzeria-los-angeles","location":{"city":"Los
+      Angeles","display_address":["432 E 2nd St","Downtown","Los Angeles, CA 90012"],"geo_accuracy":8,"neighborhoods":["Downtown","Little
+      Tokyo"],"postal_code":"90012","country_code":"US","address":["432 E 2nd St"],"coordinate":{"latitude":34.046934,"longitude":-118.238755},"state_code":"CA"},"phone":"2136200513","snippet_text":"So
+      me and a co-worker couldn''t decide on where to go fo lunch.  at first we were
+      all Carl''s jr.  i know.  not appetizing but food.  but my co-work decided....","image_url":"http://s3-media4.ak.yelpcdn.com/bphoto/cptUr6tBTwCT959dM0lXDw/ms.jpg","snippet_image_url":"http://s3-media3.ak.yelpcdn.com/photo/wbf1rLS4eG_ckm61UPe7NQ/ms.jpg","display_phone":"+1-213-620-0513","rating_img_url_large":"http://media4.ak.yelpcdn.com/static/20101216169592178/img/ico/stars/stars_large_4.png","id":"xlixe-pizzeria-los-angeles","categories":[["Pizza","pizza"],["Sandwiches","sandwiches"],["Italian","italian"]],"rating_img_url_small":"http://media2.ak.yelpcdn.com/static/20101216418129184/img/ico/stars/stars_small_4.png"},{"distance":1144.1152082403551,"mobile_url":"http://m.yelp.com/biz/zDQm3hXszZOov-w6IAI31A","rating_img_url":"http://media2.ak.yelpcdn.com/static/201012164084228337/img/ico/stars/stars_4.png","review_count":106,"name":"Purgatory
+      Pizza","rating":4.0,"url":"http://www.yelp.com/biz/purgatory-pizza-los-angeles-2","location":{"city":"Los
+      Angeles","display_address":["1326 E 1st St","Los Angeles, CA 90033"],"geo_accuracy":9,"postal_code":"90033","country_code":"US","address":["1326
+      E 1st St"],"coordinate":{"latitude":34.047504099999998,"longitude":-118.2254502},"state_code":"CA"},"phone":"3232625310","snippet_text":"The
+      location is obscure, down the street from the Mariachi Plaza in Boyle Heights.  Complimentary
+      parking next door.  The place itself is too big for what...","image_url":"http://s3-media3.ak.yelpcdn.com/bphoto/Cs-jQGvs7lnj08rGoOLqLA/ms.jpg","snippet_image_url":"http://s3-media1.ak.yelpcdn.com/photo/rGIsGSvRk-MKlJdP2CE8jw/ms.jpg","display_phone":"+1-323-262-5310","rating_img_url_large":"http://media4.ak.yelpcdn.com/static/20101216169592178/img/ico/stars/stars_large_4.png","id":"purgatory-pizza-los-angeles-2","categories":[["Pizza","pizza"]],"rating_img_url_small":"http://media2.ak.yelpcdn.com/static/20101216418129184/img/ico/stars/stars_small_4.png"},{"distance":1103.1273425100603,"mobile_url":"http://m.yelp.com/biz/cEPIeF9rqFs3ccGOlL0BwA","rating_img_url":"http://media3.ak.yelpcdn.com/static/201012161235323114/img/ico/stars/stars_3_half.png","review_count":33,"name":"Strawberry
+      Cones","rating":3.5,"url":"http://www.yelp.com/biz/strawberry-cones-los-angeles","location":{"city":"Los
+      Angeles","display_address":["333 S. Alameda St","Ste 106","Downtown","Los Angeles,
+      CA 90013"],"geo_accuracy":8,"neighborhoods":["Downtown"],"postal_code":"90013","country_code":"US","address":["333
+      S. Alameda St","Ste 106"],"coordinate":{"latitude":34.045423,"longitude":-118.238297},"state_code":"CA"},"phone":"2136200028","snippet_text":"Favorite
+      pizza joint ever. Pricey, but that serves to dissuade you from indulging too
+      much, which is a good thing if you twist it and look at it in a...","image_url":"http://s3-media4.ak.yelpcdn.com/bphoto/nk9SjFOFidR7JHkuhT29IA/ms.jpg","snippet_image_url":"http://s3-media2.ak.yelpcdn.com/photo/Y2DJw_V4Ww1WNuziFMwyPQ/ms.jpg","display_phone":"+1-213-620-0028","rating_img_url_large":"http://media1.ak.yelpcdn.com/static/201012161161255655/img/ico/stars/stars_large_3_half.png","id":"strawberry-cones-los-angeles","categories":[["Japanese","japanese"],["Pizza","pizza"]],"rating_img_url_small":"http://media3.ak.yelpcdn.com/static/201012163952475669/img/ico/stars/stars_small_3_half.png"},{"distance":602.07704829463557,"mobile_url":"http://m.yelp.com/biz/VFiAeP9nv2CdWOOTlp2_oA","rating_img_url":"http://media4.ak.yelpcdn.com/static/201012163489049252/img/ico/stars/stars_2.png","review_count":5,"name":"Sbarro","rating":2.0,"url":"http://www.yelp.com/biz/sbarro-los-angeles-3","location":{"city":"Los
+      Angeles","display_address":["L.A. City Mall","201 N Angeles St","Ste 22A","Downtown","Los
+      Angeles, CA 90012"],"geo_accuracy":8,"neighborhoods":["Downtown"],"postal_code":"90012","country_code":"US","address":["L.A.
+      City Mall","201 N Angeles St","Ste 22A"],"coordinate":{"latitude":34.054116999999998,"longitude":-118.24074299999999},"state_code":"CA"},"phone":"2134370707","snippet_text":"Okay,
+      Sbarro is Sbarro right??  WRONG!!!  \nNever come here during the lunch rush
+      (12-1) b/c the line is out the door.\nSure, they have their tantalizing...","snippet_image_url":"http://s3-media3.ak.yelpcdn.com/photo/n610fERMwK57ieudF2P2OA/ms.jpg","display_phone":"+1-213-437-0707","rating_img_url_large":"http://media2.ak.yelpcdn.com/static/20101216220207235/img/ico/stars/stars_large_2.png","id":"sbarro-los-angeles-3","categories":[["Italian","italian"]],"rating_img_url_small":"http://media4.ak.yelpcdn.com/static/201012164278297776/img/ico/stars/stars_small_2.png"},{"distance":1103.1273425100603,"mobile_url":"http://m.yelp.com/biz/6Yq0xtHmXYFiD2JOMMOSCg","rating_img_url":"http://media3.ak.yelpcdn.com/static/201012161235323114/img/ico/stars/stars_3_half.png","review_count":72,"name":"Vault
+      XXI Boutique Lounge","rating":3.5,"url":"http://www.yelp.com/biz/vault-xxi-boutique-lounge-los-angeles","location":{"city":"Los
+      Angeles","display_address":["333 S Alameda St","Ste 115","Downtown","Los Angeles,
+      CA 90013"],"geo_accuracy":8,"neighborhoods":["Downtown"],"postal_code":"90013","country_code":"US","address":["333
+      S Alameda St","Ste 115"],"coordinate":{"latitude":34.045423,"longitude":-118.238297},"state_code":"CA"},"phone":"2136252001","snippet_text":"The
+      decor is amazing and elegant.  I came here close to midnight and it was just
+      starting to get busy and by 1:30 is was pretty crowded.  \n\nSo I gave this...","image_url":"http://s3-media2.ak.yelpcdn.com/bphoto/3v5nw7euYaBU6dQ7BJPjWQ/ms.jpg","snippet_image_url":"http://s3-media2.ak.yelpcdn.com/photo/N-K_N9lMHRZdU3t_6ZSurw/ms.jpg","display_phone":"+1-213-625-2001","rating_img_url_large":"http://media1.ak.yelpcdn.com/static/201012161161255655/img/ico/stars/stars_large_3_half.png","id":"vault-xxi-boutique-lounge-los-angeles","categories":[["Italian","italian"],["Lounges","lounges"]],"rating_img_url_small":"http://media3.ak.yelpcdn.com/static/201012163952475669/img/ico/stars/stars_small_3_half.png"}]}'
+    http_version: '1.1'

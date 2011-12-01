@@ -1,0 +1,6 @@
+%h1="'#{@term}' near #{@station.name}"
+-@businesses.each_slice(1) do |chunk|
+  .row
+    -chunk.each do |b|
+      .span12
+        = render :partial => "business/search_listing", :locals => { :business => b, :station => @station }

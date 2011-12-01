@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'rails3-jquery-autocomplete'
 gem 'thin'
+gem 'oauth'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -35,6 +36,10 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem 'faker'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.7'
@@ -43,4 +48,6 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'vcr'
+  gem 'webmock'
 end
