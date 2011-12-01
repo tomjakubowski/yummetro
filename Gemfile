@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails'
 gem 'rails3-jquery-autocomplete'
+gem 'oauth'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,4 +43,6 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'vcr'
+  gem 'webmock'
 end
