@@ -1,0 +1,93 @@
+- name: Gold Line
+  color: "#FDB913"
+  stops:
+    - Sierra Madre Villa
+    - Allen
+    - Lake
+    - Memorial Park
+    - Del Mar
+    - Fillmore
+    - Mission
+    - Highland Park
+    - Southwest Museum
+    - Heritage Square / Arroyo
+    - Lincoln Heights / Cypress Park
+    - Chinatown
+    - Union Station
+    - Little Tokyo / Arts District
+    - Pico / Aliso
+    - Mariachi Plaza / Boyle Heights
+    - Soto
+    - Indiana
+    - Maravilla
+    - East LA Civic Center
+    - Atlantic
+- name: Purple Line
+  color: "#A05DA5"
+  stops:
+    - Union Station
+    - Civic Center
+    - Pershing Square
+    - 7th Street / Metro Center
+    - Westlake / MacArthur Park
+    - Wilshire / Vermont
+    - Wilshire / Normandie
+    - Wilshire / Western
+- name: Red Line
+  color: "#ED1C24"
+  stops:
+    - Union Station
+    - Civic Center
+    - Pershing Square
+    - 7th Street / Metro Center
+    - Westlake / MacArthur Park
+    - Wilshire / Vermont
+    - Vermont / Beverly
+    - Vermont / Santa Monica
+    - Vermont / Sunset
+    - Hollywood / Western
+    - Hollywood / Vine
+    - Hollywood / Highland
+    - Universal City
+    - North Hollywood
+- name: Blue Line
+  color: "#0072BC"
+  stops:
+    - 7th Street / Metro Center
+    - Pico
+    - Grand
+    - San Pedro
+    - Washington
+    - Vernon
+    - Slauson
+    - Florence
+    - Firestone
+    - 103rd Street
+    - Imperial / Wilmington (Rosa Parks)
+    - Compton
+    - Artesia
+    - Del Amo
+    - Wardlow
+    - Willow
+    - PCH
+    - Anaheim
+    - 5th Street
+    - Pacific
+    - 1st Street
+    - Long Beach Transit Mall
+- name: Green Line
+  color: "#6DC067"
+  stops:
+    - Redondo Beach
+    - Douglas
+    - El Segundo
+    - Mariposa
+    - Aviation
+    - Hawthorne
+    - Crenshaw
+    - Vermont
+    - Harbor Freeway
+    - Imperial / Wilmington (Rosa Parks)
+    - Long Beach
+    - Lakewood
+    - Norwalk
