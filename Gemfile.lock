@@ -49,6 +49,8 @@ GEM
     factory_girl_rails (1.4.0)
       factory_girl (~> 2.3.0)
       railties (>= 3.0.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -158,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.1.1)
   factory_girl_rails
+  faker
   haml-rails
   jquery-rails
   oauth
