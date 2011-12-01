@@ -19,6 +19,7 @@ gem 'haml-rails'
 gem 'rails3-jquery-autocomplete'
 gem 'thin'
 gem 'oauth'
+gem 'psych'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
