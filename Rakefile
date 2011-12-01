@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Railonrails::Application.load_tasks
+Metro::Application.load_tasks
