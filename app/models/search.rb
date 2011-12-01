@@ -18,7 +18,10 @@ class Search
       Business.new :name => b['name'],
                    :distance => b['distance'],
                    :display_address => b['location']['display_address'],
-                   :phone => b['phone']
+                   :phone => b['phone'],
+                   :rating_image_url => b['rating_img_url'],
+                   :review_count => b['review_count'],
+                   :yelp_url => b['url']
     end
   end
 end

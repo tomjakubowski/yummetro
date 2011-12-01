@@ -1,9 +1,9 @@
 class Business
   include ActiveModel::Validations
 
-  attr_accessor :name, :distance, :display_address, :phone
+  attr_accessor :name, :distance, :display_address, :phone, :review_count, :rating_image_url, :yelp_url
 
-  validates_presence_of :name, :distance, :display_address
+  validates_presence_of :name, :distance, :display_address, :review_count, :rating_image_url, :yelp_url
 
   def initialize(attributes = {})
     attributes.each do |name, value|

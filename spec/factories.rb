@@ -14,4 +14,7 @@ Factory.define :business do |business|
   business.distance 1000
   business.phone "(555) 764-8437"
   business.display_address ["555 Fake St.", "Springfield, XX 69420"]
+  business.rating_image_url "http://static.yelp.com/foo/FIVESTARS.png",
+  business.yelp_url "http://yelp.com/biz/moes-tavern-springfield"
+  business.review_count 57
 end
