@@ -13,6 +13,12 @@ class Search
   def fetch_results
     request = YelpRequest.new(@term, @station.latitude, @station.longitude, @limit, @radius)
     response = request.fetch_raw_data
-    JSON.parse(response)
+    businesses = JSON.parse(response)['businesses']
+    businesses.map do |b|
+      Business.new :name => b['name'],
+                   :distance => b['distance'],
+                   :display_address => b['location']['display_address'],
+                   :phone => b['phone']
+    end
   end
 end

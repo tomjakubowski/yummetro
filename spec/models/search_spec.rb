@@ -31,8 +31,9 @@ describe Search do
       @pizza.should respond_to(:fetch_results)
     end
 
-    it "should fetch some results" do
-      @pizza.fetch_results.should include('businesses')
+    it "should fetch an array of Businesses" do
+      results = @pizza.fetch_results
+      results.each { |r| r.should be_an_instance_of Business }
     end
   end
 end
