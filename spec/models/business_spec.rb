@@ -29,4 +29,14 @@ describe Business do
     moes = Business.new(@attr)
     moes.should be_valid
   end
+
+  it "should convert distance to miles" do
+    moes = Business.new(@attr.merge(:distance => 500))
+    moes.distance_in_miles.should be_within(0.01).of(0.31)
+  end
+
+  it "should convert distance to kilometers" do
+    moes = Business.new(@attr.merge(:distance => 500))
+    moes.distance_in_km.should == 0.5
+  end
 end
