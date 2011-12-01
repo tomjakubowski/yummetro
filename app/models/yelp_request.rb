@@ -21,7 +21,7 @@ class YelpRequest
     consumer = OAuth::Consumer.new(@consumer_key, @consumer_secret, {:site => "http://#{@api_host}"})
     access_token = OAuth::AccessToken.new(consumer, @token, @token_secret)
 
-    path = "/v2/search?term=#{@term}&ll=#{@ll}&limit=#{@limit}&sort=0&radius_filter=#{@radius}"
+    path = "/v2/search?term=#{CGI.escape(@term)}&ll=#{@ll}&limit=#{@limit}&sort=0&radius_filter=#{@radius}"
     access_token.get(path).body
   end
 end
