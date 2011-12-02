@@ -1,7 +1,10 @@
 module ApplicationHelper
-  def short_station_listing(station, line=nil)
-    listing = link_to(station.name, station, :class => "camo")
-    lines = line ? station.transfers_from(line) : station.lines_served
+  def short_station_listing(station, opts={})
+    opts = { :line_scope => nil, :short_name => false }.merge(opts)
+    display_name = opts[:short_name] ? station.short_name : station.name
+
+    listing = link_to(display_name, station, :class => "camo")
+    lines = opts[:line_scope] ? station.transfers_from(opts[:line_scope]) : station.lines_served
 
     colors = lines.map { |l| l.color }
     listing << " #{colors.map {|c| colored_dot(c)}.join('')}".html_safe if colors.length > 0

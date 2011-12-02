@@ -1,3 +1,3 @@
 %ul.unstyled
   =list_of line.stations do |station|
-    =short_station_listing(station, line)
+    =short_station_listing(station, :line_scope => line, :short_name => true)
