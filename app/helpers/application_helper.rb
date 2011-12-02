@@ -8,7 +8,9 @@ module ApplicationHelper
 
     display_name = opts[:short_name] ? station.short_name : station.name
 
-    listing = opts[:link_to] ? link_to(display_name, station, :class => "camo") : display_name
+    listing = ""
+    listing << (opts[:link_to] ? link_to(display_name, station, :class => "camo") : display_name)
+
     lines = opts[:line_scope] ? station.transfers_from(opts[:line_scope]) : station.lines_served
 
     colors = lines.map { |l| l.color }
