@@ -14,4 +14,18 @@ class Station < ActiveRecord::Base
   def transfers_from(line)
     lines_served.reject { |l| l == line } if serving? line
   end
+
+  def short_name
+    unless short_name_exceptions.include?(self.name)
+      self.name.gsub(/ (Station)/, "")
+    else
+      self.name
+    end
+  end
+
+  private
+
+  def short_name_exceptions
+    ["Union Station"]
+  end
 end

@@ -12,6 +12,16 @@ describe Station do
     union.should_not be_valid
   end
 
+  it "should provide an appropriate short name" do
+    western = Station.new(:name => "Western Station")
+    western.short_name.should == "Western"
+  end
+
+  it "should not shorten a special station name" do
+    union = Station.new(:name => "Union Station")
+    union.short_name.should == "Union Station"
+  end
+
   describe "served lines" do
     before(:each) do
       @line = Factory(:line)
