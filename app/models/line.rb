@@ -1,7 +1,7 @@
 class Line < ActiveRecord::Base
   attr_accessible :name, :color
   has_many :stops, :dependent => :destroy
-  has_many :stations, :through => :stops
+  has_many :stations, :through => :stops, :order => 'stops.id ASC'
 
   validates :name, :presence => :true
   validates_format_of :color, :with => /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/

@@ -57,5 +57,18 @@ describe Line do
       @line.remove_stop!(@station)
       @line.should_not be_stopping_at(@station)
     end
+
+  describe "stations"
+    before(:each) do
+      @line = Factory(:line)
+      @station1 = Factory(:station)
+      @station2 = Factory(:station, :name => "Bunion Station")
+      @line.add_stop!(@station2)
+      @line.add_stop!(@station1)
+    end
+
+    it "should sort stations by the ordering of stops" do
+      @line.stations.should == [@station2, @station1]
+    end
   end
 end
