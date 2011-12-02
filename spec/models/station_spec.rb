@@ -6,6 +6,12 @@ describe Station do
     nameless.should_not be_valid
   end
 
+  it "should not allow a duplicate name" do
+    union = Station.create!(:name => "Union Station")
+    union = Station.new(:name => "Union Station")
+    union.should_not be_valid
+  end
+
   describe "served lines" do
     before(:each) do
       @line = Factory(:line)

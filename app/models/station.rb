@@ -4,7 +4,8 @@ class Station < ActiveRecord::Base
   has_many :stops, :dependent => :destroy
   has_many :lines_served, :through => :stops, :source => :line
 
-  validates :name, :presence => :true
+  validates_presence_of :name
+  validates_uniqueness_of :name
 
   def serving?(line)
     stops.find_by_line_id(line)
