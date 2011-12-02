@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111129030906) do
+ActiveRecord::Schema.define(:version => 20111202211038) do
 
   create_table "lines", :force => true do |t|
     t.string   "name"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20111129030906) do
     t.datetime "updated_at"
   end
 
-  add_index "stops", ["line_id", "station_id"], :name => "index_stops_on_line_id_and_station_id", :unique => true
   add_index "stops", ["line_id"], :name => "index_stops_on_line_id"
   add_index "stops", ["station_id"], :name => "index_stops_on_station_id"
 
