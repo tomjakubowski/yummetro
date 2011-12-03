@@ -1,7 +1,7 @@
 Metro::Application.routes.draw do
   match 'search' => 'search#search'
 
-  resources :lines do
+  resources :lines, :only => [:index, :show] do
     get :autocomplete_station_name, :on => :collection
   end
 
