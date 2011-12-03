@@ -1,4 +1,6 @@
 class Stop < ActiveRecord::Base
+  attr_accessible :station_id, :line_id
+
   belongs_to :line
   belongs_to :station
 
