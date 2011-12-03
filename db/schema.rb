@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203001724) do
+ActiveRecord::Schema.define(:version => 20111203053035) do
 
   create_table "lines", :force => true do |t|
     t.string   "name"
     t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "lines", ["slug"], :name => "index_lines_on_slug", :unique => true
 
   create_table "stations", :force => true do |t|
     t.string   "name"
@@ -28,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20111203001724) do
     t.datetime "updated_at"
     t.string   "slug"
   end
+
+  add_index "stations", ["slug"], :name => "index_stations_on_slug", :unique => true
 
   create_table "stops", :force => true do |t|
     t.integer  "line_id"
