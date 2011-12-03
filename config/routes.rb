@@ -1,5 +1,6 @@
 Metro::Application.routes.draw do
-  get "pages/index"
+
+  root :to => 'pages#index'
 
   match 'search' => 'search#search'
 
