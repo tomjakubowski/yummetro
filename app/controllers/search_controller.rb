@@ -3,5 +3,6 @@ class SearchController < ApplicationController
     @term = params[:query]
     @station = Station.find_by_name(params[:near])
     @businesses = Search.new(:term => @term, :station => @station).fetch_results
+    @title = "'#{@term}' near #{@station.name}"
   end
 end
