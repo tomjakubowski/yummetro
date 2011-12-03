@@ -5,6 +5,8 @@ Metro::Application.routes.draw do
     get :autocomplete_station_name, :on => :collection
   end
 
+  resources :stations, :only => [:index, :show]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

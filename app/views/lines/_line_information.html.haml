@@ -1,6 +1,5 @@
 %h2
-  =line.name
+  =link_to(line.name, line, :class => "camo")
   =color_indicator(line)
-  %small=link_to "More&#8230;".html_safe, line
 %h4 Stops at:
 =render :partial => "stops", :locals => { :line => line }

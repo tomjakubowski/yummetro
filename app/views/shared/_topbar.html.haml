@@ -4,8 +4,7 @@
       %a.brand(href="/")Untitled
       %ul.nav
         %li=link_to "Lines", lines_path
-        %li
-          %a(href="#")Stations
+        %li=link_to "Stations", stations_path
       %form.pull-right(action="/search")
         %input.span4(type="text" placeholder="Search for..." name="query")
         =autocomplete_field_tag 'near', '', autocomplete_station_name_lines_path, :placeholder => "Near...", :class => "span4"

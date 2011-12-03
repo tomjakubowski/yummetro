@@ -4,7 +4,7 @@
     %small="%.2f miles away" % business.distance_in_miles
   %div
     =image_tag(business.rating_image_url, :class => "rating")
-    =link_to "Read #{business.review_count} reviews on Yelp!", business.yelp_url, :target => "_blank"
+    =link_to "Read #{pluralize(business.review_count, 'review')} on Yelp!", business.yelp_url, :target => "_blank"
 %address
   -business.display_address.each do |line|
     =line

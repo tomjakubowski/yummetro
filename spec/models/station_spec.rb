@@ -6,6 +6,22 @@ describe Station do
     nameless.should_not be_valid
   end
 
+  it "should not allow a duplicate name" do
+    union = Station.create!(:name => "Union Station")
+    union = Station.new(:name => "Union Station")
+    union.should_not be_valid
+  end
+
+  it "should provide an appropriate short name" do
+    western = Station.new(:name => "Western Station")
+    western.short_name.should == "Western"
+  end
+
+  it "should not shorten a special station name" do
+    union = Station.new(:name => "Union Station")
+    union.short_name.should == "Union Station"
+  end
+
   describe "served lines" do
     before(:each) do
       @line = Factory(:line)
@@ -29,6 +45,20 @@ describe Station do
 
     it "should exclude the given line from the list of transfers" do
       @station.transfers_from(@line).should_not include(@line)
+    end
+  end
+
+  describe "slug" do
+    before(:each) do
+      @station = Station.create!(:name => "Foo Bar Station", :latitude => 0.0, :longitude => 0.0)
+    end
+
+    it "should have a slug method" do
+      @station.should respond_to(:slug)
+    end
+
+    it "should slugify the short name" do
+      @station.slug.should == "foo-bar"
     end
   end
 end
