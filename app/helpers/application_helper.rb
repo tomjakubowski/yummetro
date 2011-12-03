@@ -21,4 +21,17 @@ module ApplicationHelper
   def colored_dot(color)
     "<span style=\"color: #{color};\">&#9679;</span>".html_safe
   end
+
+  def title
+    base_title = "yumMetro"
+    if @title.nil?
+      base_title
+    else
+      "#{base_title} | #{@title}"
+    end
+  end
+
+  def source_repo_path
+    "http://github.com/tomjakubowski/yummetro"
+  end
 end

@@ -1,4 +1,7 @@
 Metro::Application.routes.draw do
+
+  root :to => 'pages#index'
+
   match 'search' => 'search#search'
 
   resources :lines, :only => [:index, :show] do
