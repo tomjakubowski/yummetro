@@ -1,4 +1,7 @@
 class Station < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :short_name, :use => :slugged
+
   attr_accessible :name, :longitude, :latitude
   # If a Station is torn down, no line will stop there right?
   has_many :stops, :dependent => :destroy

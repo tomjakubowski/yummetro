@@ -53,6 +53,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.0.1)
       i18n (~> 0.4)
+    friendly_id (4.0.0.beta14)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -168,6 +169,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   factory_girl_rails
   faker
+  friendly_id (~> 4.0.0.beta14)
   haml-rails
   jquery-rails
   oauth

@@ -47,4 +47,18 @@ describe Station do
       @station.transfers_from(@line).should_not include(@line)
     end
   end
+
+  describe "slug" do
+    before(:each) do
+      @station = Station.create!(:name => "Foo Bar Station", :latitude => 0.0, :longitude => 0.0)
+    end
+
+    it "should have a slug method" do
+      @station.should respond_to(:slug)
+    end
+
+    it "should slugify the short name" do
+      @station.slug.should == "foo-bar"
+    end
+  end
 end
