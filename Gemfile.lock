@@ -78,6 +78,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    nokogiri (1.5.0)
     oauth (0.4.5)
     pg (0.11.0)
     polyglot (0.3.3)
@@ -161,6 +162,10 @@ GEM
     webmock (1.7.8)
       addressable (~> 2.2, > 2.2.5)
       crack (>= 0.1.7)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
 
 PLATFORMS
   ruby
@@ -186,3 +191,4 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
   vcr
   webmock
+  webrat
