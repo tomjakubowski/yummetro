@@ -1,19 +1,23 @@
 require 'spec_helper'
 
 describe Line do
+  before(:each) do
+    @attr = {:name => "Gold Line", :color => "#FDB913"}
+  end
+
   it "should require a name" do
-    nameless = Line.new(:name => "")
+    nameless = Line.new(@attr.merge(:name => ""))
     nameless.should_not be_valid
   end
 
   it "should reject a poorly formatted color" do
-    lazycolor = Line.new(:name => "Gold Line", :color => "gold")
+    lazycolor = Line.new(@attr.merge(:color => "gold"))
     lazycolor.should_not be_valid
   end
 
-  it "should accept a well formatted color" do
-    hexcolor = Line.new(:name => "Gold Line", :color => "#FDB913")
-    hexcolor.should be_valid
+  it "should be valid given valid attributes" do
+    gold = Line.new(@attr)
+    gold.should be_valid
   end
 
   describe "station stops" do
@@ -63,6 +67,20 @@ describe Line do
       @line.add_stop!(bunion)
       @line.add_stop!(@station)
       @line.stations.should == [bunion, @station]
+    end
+  end
+
+  describe "slug" do
+    before(:each) do
+      @slugged = Factory(:line)
+    end
+
+    it "should be a method" do
+      @slugged.should respond_to(:slug)
+    end
+
+    it "should be equal to to_param" do
+      @slugged.to_param.should == @slugged.slug
     end
   end
 end
