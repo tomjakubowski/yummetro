@@ -1,4 +1,6 @@
 Metro::Application.routes.draw do
+  get "pages/index"
+
   match 'search' => 'search#search'
 
   resources :lines, :only => [:index, :show] do
