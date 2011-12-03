@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe SearchController do
+describe StationsController do
   pending "tests go here"
 end

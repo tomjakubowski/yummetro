@@ -1,0 +1,15 @@
+%h1=short_station_listing(@station, :link_to => false)
+
+.row
+  .span10
+    %h2="Search near #{@station.short_name}"
+    %form.form-stacked(action="/search")
+      = field_set_tag do
+        .clearfix
+          = label_tag :query, "Search for:"
+          .input
+            = text_field_tag :query
+            %span.help-inline e.g. pizza, clothes, bars
+        = hidden_field_tag :near, @station.name
+      .actions
+        %button.btn.primary(type="submit")Search
