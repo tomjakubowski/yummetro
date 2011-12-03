@@ -3,10 +3,7 @@
     %h1
       =@line.name
       =color_indicator(@line)
-    %p
-      Maybe sometime put some descriptive text about each line in here? Something
-      like "The Gold Line was built in blah blah and serves Pasadena and East LA
-      via Union Station"
-  .span-one-thirds
+    -# someday write a bunch of descriptions for the lines, they can go here
+  .span-one-third
     %h2 Stops at:
     =render :partial => "stops", :locals => { :line => @line }
