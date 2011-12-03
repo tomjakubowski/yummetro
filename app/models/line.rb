@@ -1,4 +1,7 @@
 class Line < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, :use => :slugged
+
   attr_accessible :name, :color
   has_many :stops, :dependent => :destroy
   has_many :stations, :through => :stops, :order => 'stops.id ASC'
