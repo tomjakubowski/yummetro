@@ -2,18 +2,4 @@
   %h1
     yumMetro
     %small Metro-accessible restaurants, shops, nightlife, and more in Los Angeles.
-  %form#mainsearch(action="/search")
-    = field_set_tag do
-      .clearfix
-        = label_tag :mainquery, "Search for:"
-        .input
-          = text_field_tag :query, nil, :class => "span6", :id => "mainquery"
-          %span.help-inline e.g. pizza, clothes, bars
-      .clearfix
-        = label_tag :mainnear, "Near Metro station:"
-        .input
-          =autocomplete_field_tag 'near', '', autocomplete_station_name_lines_path, :class => "span6", :id => "mainnear"
-          %span.help-inline e.g. Union Station
-      .actions
-        %button.btn.primary(type="submit") Search
-        %button.btn(type="reset") Clear
+  = render :partial => "shared/search"
