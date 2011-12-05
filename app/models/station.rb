@@ -26,6 +26,10 @@ class Station < ActiveRecord::Base
     end
   end
 
+  def self.find_by_name_case_insensitive(name)
+    self.where("lower(name) = ?", name.downcase).first if name
+  end
+
   private
 
   def short_name_exceptions

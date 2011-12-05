@@ -22,6 +22,15 @@ describe Station do
     union.short_name.should == "Union Station"
   end
 
+  it "should have a find_by_name_case_insensitive method" do
+    Station.should respond_to(:find_by_name_case_insensitive)
+  end
+
+  it "should find a station regardless of case" do
+    union = Station.create!(:name => "Union Station")
+    Station.find_by_name_case_insensitive("uNiOn StAtIon").should == union
+  end
+
   describe "served lines" do
     before(:each) do
       @line = Factory(:line)

@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   # This method is sort of a cluster...
   def index
-    @term, @station = params[:query], Station.find_by_name(params[:near])
+    @term, @station = params[:query], Station.find_by_name_case_insensitive(params[:near])
     if @term.nil? || @station.nil?
       @title = "Search"
       if params[:near]
