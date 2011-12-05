@@ -3,5 +3,10 @@
   =short_station_listing(@station, :link_to => true)
 -@businesses.each do |b|
   .row
-    .span12
+    .search-result.span12
       = render :partial => "business/search_listing", :locals => { :business => b, :station => @station }
+%hr
+.row
+  .api-credits.span12
+    %p
+      =powered_by_yelp
