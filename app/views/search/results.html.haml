@@ -1,6 +1,7 @@
-%h1
-  ="'#{@term}' near "
-  =short_station_listing(@station, :link_to => true)
+.page-header
+  %h1
+    ="'#{@term}' near "
+    =short_station_listing(@station, :link_to => true)
 -@businesses.each do |b|
   .row
     .search-result.span12

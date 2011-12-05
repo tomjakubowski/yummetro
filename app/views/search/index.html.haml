@@ -1,0 +1,6 @@
+.page-header
+  %h1 Search
+- if flash[:error]
+  .alert-message.block-message.error
+    =flash[:error]
+= render :partial => "shared/search"
