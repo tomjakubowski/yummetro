@@ -6,10 +6,11 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = render :partial => "layouts/analytics"
+    = render :partial => "layouts/meta"
   %body
     = render :partial => "layouts/topbar"
     .container
       .content= yield
       .footer
         %p
-          &copy; 2011 Tom Jakubowski.
+          &copy; 2011 Tom Jakubowski. Designed with modern browsers in mind.
