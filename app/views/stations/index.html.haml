@@ -1,5 +1,8 @@
 .page-header
-  %h1 Stations
+  %h1
+    Stations
+    %small
+      The rail stations of the Los Angeles Metro.
 %ul.unstyled
   =list_of @stations do |s|
     =short_station_listing(s)
