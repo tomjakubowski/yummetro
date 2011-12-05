@@ -3,6 +3,7 @@
     .container
       %a.brand(href="/")yumMetro
       %ul.nav
+        %li=link_to "Search", search_path
         %li=link_to "Lines", lines_path
         %li=link_to "Stations", stations_path
         %li=link_to "GitHub", source_repo_path, :target => "_blank"

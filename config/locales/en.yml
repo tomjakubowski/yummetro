@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  error_prefix:
+    text: "Whoops!"
+    html: "<strong>Whoops!</strong> "
+  errors:
+    unknown_station: "We couldn't seem to find a station named '%{station}'."
+
